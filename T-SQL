@@ -9,3 +9,13 @@ BEGIN;
 insert into MemberProject values (@mem,@proj);
 set @proj = @proj +1;
 END;
+
+---------------
+
+  select concat('update ProductPictures set Url="', RIGHT(Url, LEN(Url) - 54), '" where id=',Id,';') from ProductPictures order by Id
+
+  select concat('update Companies set LogoUrl="', RIGHT(LogoUrl, LEN(LogoUrl) - 54), '" where id=',Id,';') from Companies  
+  where LogoUrl is not null order by Id
+
+  select concat('update CompanyEnvironments set LogoUrl="', RIGHT(Url, LEN(Url) - 54), '" where id=',Id,';') from CompanyEnvironments  
+  where Url is not null order by Id
