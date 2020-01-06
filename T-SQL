@@ -1,0 +1,11 @@
+--Variable decleration and While loop
+
+declare @mem int;
+declare @proj int;
+set @mem = 232;
+set @proj = 1;
+WHILE(@proj < 417)
+BEGIN;
+insert into MemberProject values (@mem,@proj);
+set @proj = @proj +1;
+END;
